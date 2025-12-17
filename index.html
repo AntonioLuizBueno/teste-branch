@@ -1,0 +1,100 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL 5 Exemplos</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GL-MATRIX OBRIGATÓRIO AQUI (ANTES DO script.js) -->
+    <script src="gl-matrix-min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>WebGL 5 Exemplos</h1>
+        <p>Funcionando 100% no seu navegador</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#cubo">Cubo</a></li>
+            <li><a href="#esfera">Esfera</a></li>
+            <li><a href="#textura">Textura</a></li>
+            <li><a href="#animacao">Animação</a></li>
+            <li><a href="#interativo">Interativo</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- 1. CUBO -->
+        <section id="cubo">
+            <h2>Cubo Básico</h2>
+            <p>Cubo colorido girando.</p>
+            <div class="canvas-container">
+                <canvas id="glCanvasCubo" width="500" height="400"></canvas>
+            </div>
+            <div class="controls">
+                <button id="btnResetCubo">Resetar</button>
+            </div>
+        </section>
+
+        <!-- 2. ESFERA -->
+        <section id="esfera">
+            <h2>Esfera Iluminada</h2>
+            <p>Ajuste a luz com os sliders.</p>
+            <div class="canvas-container">
+                <canvas id="glCanvasEsfera" width="500" height="400"></canvas>
+            </div>
+            <div class="controls">
+                <label>X: <input type="range" id="luzX" min="-10" max="10" step="0.1" value="3"></label>
+                <label>Y: <input type="range" id="luzY" min="-10" max="10" step="0.1" value="5"></label>
+                <label>Z: <input type="range" id="luzZ" min="-10" max="10" step="0.1" value="7"></label>
+            </div>
+        </section>
+
+        <!-- 3. TEXTURA -->
+        <section id="textura">
+            <h2>Cubo com Textura</h2>
+            <p>Textura de madeira.</p>
+            <div class="canvas-container">
+                <canvas id="glCanvasTextura" width="500" height="400"></canvas>
+            </div>
+        </section>
+
+        <!-- ===== 4. ANIMAÇÃO (CUBO COM LUZ PULSANTE) ===== -->
+        <section id="animacao">
+            <h2>Animação</h2>
+            <p>Cubo com luz pulsante.</p>
+            <div class="canvas-container">
+                <canvas id="glCanvasAnimacao" width="500" height="400"></canvas>
+            </div>
+            <div class="controls">
+                <button id="btnPausar">Pausar</button>
+            </div>
+        </section>
+
+        <!-- 5. INTERATIVO -->
+        <section id="interativo">
+            <h2>Interativo</h2>
+            <p>Arraste para girar. Clique para mudar cor.</p>
+            <div class="canvas-container">
+                <canvas id="glCanvasInterativo" width="500" height="400"></canvas>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 WebGL Puro</p>
+    </footer>
+
+    <!-- SEU script.js AQUI, DEPOIS DO gl-matrix -->
+    <script src="script.js"></script>
+</body>
+
+</html>
